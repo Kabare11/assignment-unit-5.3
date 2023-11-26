@@ -3,19 +3,34 @@ console.log('***** Music Collection *****')
 
 let myCollection = [];
 
-function addToCollection(collection, title, artist, yearPublished) {
+function addToCollection(title, artist, yearPublished) {
+  let newObject = {
+
+    title,
+    artist,
+    yearPublished,
+  }
+  collection.push(newObject)
+  return newObject
 
 }
-let newObject = {
 
-  title:
-    artist:
-  yearPublished:
+console.log(addToCollection('Wadani', 'Awale', '1992'))
+console.log(addToCollection('Sorry', 'Justin', '2012'))
+console.log(addToCollection('love', 'AK', '2022'))
+console.log(addToCollection('Jacket', 'Abdulahi', '2015'))
+console.log(addToCollection('True', 'Adahey', '2000'))
+console.log(addToCollection('Never', 'Chira', '2015'))
+
+console.log(collection)
+
+function showCollection(x) {
+  console.log(x.length)
+  for (let i = 0; i < x.length; i++) {
+    console.log(x[i].title, 'By' x[i].artist, 'published in', X[i].yearPublished)
+  }
 }
-
-
-
-
+showCollection(collection)
 
 
 
