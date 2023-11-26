@@ -20,7 +20,7 @@ class MyReporter {
         runner
             .on(EVENT_TEST_FAIL, (test, err) => {
                 if (test.parent.title.includes('STRETCH')) {
-                  stretchGoalsLoggedToOutput++;
+                    stretchGoalsLoggedToOutput++;
                 }
                 errors.push(err);
                 console.log(
@@ -50,16 +50,16 @@ class MyReporter {
                     `\x1b[0m`
                 );
                 console.log(
-                  `\x1b[33m`,
-                  `| Verified that all functions behave as required in relevant test cases | - |`,
-                  `\x1b[0m`
+                    `\x1b[33m`,
+                    `| Verified that all functions behave as required in relevant test cases | - |`,
+                    `\x1b[0m`
                 );
             })
             .once(EVENT_RUN_END, () => {
                 const stretchGoalRubricRows = [
-                  'STRETCH: `search` takes in a criteria object and returns an array of matching albums',
-                  'STRETCH: Added an array of `tracks` to the albums and updated functions to work with this property',
-                  'STRETCH: All Stretch functions tested fully',
+                    'STRETCH: `search` takes in a criteria object and returns an array of matching albums',
+                    'STRETCH: Added an array of `tracks` to the albums and updated functions to work with this property',
+                    'STRETCH: All Stretch functions tested fully',
                 ]
                 for (let i = stretchGoalsLoggedToOutput; i < stretchGoalRubricRows.length; i++) {
                     console.log(
@@ -70,7 +70,7 @@ class MyReporter {
                 }
 
                 console.log('');
-                
+
                 // console.log(`end: ${stats.passes}/${stats.passes + stats.failures} ok`);
 
                 errors.map((err, i) => {
