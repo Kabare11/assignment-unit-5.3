@@ -17,7 +17,7 @@ function addToCollection(title, artist, yearPublished) {
 
 console.log(addToCollection('Wadani', 'Awale', '1992'))
 console.log(addToCollection('Sorry', 'Justin', '2012'))
-console.log(addToCollection('love', 'AK', '2022'))
+console.log(addToCollection('love', 'Awale', '2022'))
 console.log(addToCollection('Jacket', 'Abdulahi', '2015'))
 console.log(addToCollection('True', 'Adahey', '2000'))
 console.log(addToCollection('Never', 'Chira', '2015'))
@@ -32,7 +32,16 @@ function showCollection(x) {
 }
 showCollection(collection)
 
-
+function findByArtist(artist) {
+  const findResult = []
+  for (let i = 0; i <= collection.length; i++) {
+    if (collection[i].artist === artist) {
+      findResult.push(collection[i])
+    }
+  }
+  return findResult
+}
+console.log(findByArtist(''))
 
 
 
