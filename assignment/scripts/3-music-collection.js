@@ -3,7 +3,8 @@ console.log('***** Music Collection *****')
 
 let myCollection = [];
 
-function addToCollection(title, artist, yearPublished) {
+function addToCollection(collection, title, artist, yearPublished) {
+
   let newObject = {
 
     title,
@@ -11,7 +12,7 @@ function addToCollection(title, artist, yearPublished) {
     yearPublished,
   }
   collection.push(newObject)
-  return newObject
+  return newObject;
 
 }
 
@@ -24,10 +25,10 @@ console.log(addToCollection('Never', 'Chira', '2015'))
 
 console.log(collection)
 
-function showCollection(x) {
-  console.log(x.length)
-  for (let i = 0; i < x.length; i++) {
-    console.log(x[i].title, 'By' x[i].artist, 'published in', X[i].yearPublished)
+function showCollection(collection) {
+  console.log(collection.length)
+  for (let i = 0; i < collection.length; i++) {
+    console.log(collection[i].title, 'By', collection[i].artist, 'published in', collection[i].yearPublished)
   }
 }
 showCollection(collection)
