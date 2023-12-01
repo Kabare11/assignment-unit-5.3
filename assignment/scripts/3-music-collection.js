@@ -2,6 +2,7 @@ console.log('***** Music Collection *****')
 // Safe Zone -- Write code below this line
 
 let myCollection = [];
+let myJazzCollection = [];
 
 function addToCollection(collection, title, artist, yearPublished) {
 
@@ -16,33 +17,43 @@ function addToCollection(collection, title, artist, yearPublished) {
 
 }
 
-console.log(addToCollection('Wadani', 'Awale', '1992'))
-console.log(addToCollection('Sorry', 'Justin', '2012'))
-console.log(addToCollection('love', 'Awale', '2022'))
-console.log(addToCollection('Jacket', 'Abdulahi', '2015'))
-console.log(addToCollection('True', 'Adahey', '2000'))
-console.log(addToCollection('Never', 'Chira', '2015'))
+console.log(addToCollection(myCollection, 'Wadani', 'Awale', '1992'))
 
-console.log(collection)
+console.log(addToCollection(myCollection, 'Sorry', 'Justin', '2012'))
+
+console.log(addToCollection(myCollection, 'love', 'Awale', '2022'))
+
+console.log(addToCollection(myCollection, 'Jacket', 'Abdulahi', '2015'))
+
+console.log(addToCollection(myCollection, 'True', 'Adahey', '2000'))
+
+console.log(addToCollection(myCollection, 'Never', 'Chira', '2015'))
+
+console.log(myCollection)
+
 
 function showCollection(collection) {
   console.log(collection.length)
-  for (let i = 0; i < collection.length; i++) {
-    console.log(collection[i].title, 'By', collection[i].artist, 'published in', collection[i].yearPublished)
+  for (let i = 0; i < collection.
+    length; i++) {
+    console.log(`${collection[i].title} By ${collection[i].artist}, published in ${collection[i].yearPublished}`)
+
   }
 }
-showCollection(collection)
+showCollection(myCollection)
 
-function findByArtist(artist) {
+function findByArtist(collection, artist) {
   const findResult = []
-  for (let i = 0; i <= collection.length; i++) {
+  console.log('inside collection', collection)
+  for (let i = 0; i < collection.length; i++) {
     if (collection[i].artist === artist) {
       findResult.push(collection[i])
     }
   }
   return findResult
 }
-console.log(findByArtist(''))
+console.log(findByArtist(myCollection, 'Awale'))
+
 
 
 
